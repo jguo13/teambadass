@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 
 import sys
-sys.path.append('./spectrum')
 from spectrum import Spectrum
 
 def plottest(filename = None, outputpdf = "test.pdf"):
+	"""
+	Argument: filename
+	Optional: outputpdf, default to test.pdf in current directory
+	"""
 	if filename ==None:
 		raise IOError("Needs to give input filename.")
 	s = Spectrum(filename)
